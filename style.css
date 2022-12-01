@@ -232,6 +232,7 @@ ion-header::after {
     font-size: 4rem;
     color: rgb(32, 33, 36);
     margin-bottom: 16px;
+    display: flex;
 }
 .app-dev {
     cursor: pointer;
@@ -487,6 +488,14 @@ ion-header::after {
     letter-spacing: 0.2px;
     font-size: 0.85rem;
 }
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
 
 /* FOOTER */
 .footer {
