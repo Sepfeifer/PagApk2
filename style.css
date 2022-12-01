@@ -1,0 +1,715 @@
+@font-face {
+    font-family: 'Google Sans';
+    src: url('./fonts/ProductSans-Black.ttf');
+    font-weight: 600;
+    font-display: swap
+}
+@font-face {   
+    font-family: 'Google Sans';
+    src: url('./fonts/ProductSans-BlackItalic.ttf');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {   
+    font-family: 'Google Sans';
+    src: url('./fonts/ProductSans-Bold.ttf');
+    font-weight: 500;
+    font-display: swap
+}
+@font-face {   
+    font-family: 'Google Sans';
+    src: url('./fonts/ProductSans-BoldItalic.ttf');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {   
+    font-family: 'Google Sans';
+    src: url('./fonts/ProductSans-Medium.ttf');
+    font-weight: 400;
+    font-display: swap
+}
+@font-face {   
+    font-family: 'Google Sans';
+    src: url('./fonts/ProductSans-MediumItalic.ttf');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {   
+    font-family: 'Google Sans';
+    src: url('./fonts/ProductSans-Regular.ttf');
+    font-weight: 300;
+    font-display: swap
+}
+@font-face {   
+    font-family: 'Google Sans';
+    src: url('./fonts/ProductSans-Italic.ttf');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {   
+    font-family: 'Google Sans';
+    src: url('./fonts/ProductSans-Light.ttf');
+    font-weight: 200;
+    font-display: swap
+}
+@font-face {   
+    font-family: 'Google Sans';
+    src: url('./fonts/ProductSans-LightItalic.ttf');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {   
+    font-family: 'Google Sans';
+    src: url('./fonts/ProductSans-Thin.ttf');
+    font-weight: 100;
+    font-display: swap
+}
+@font-face {   
+    font-family: 'Google Sans';
+    src: url('./fonts/ProductSans-ThinItalic.ttf');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap
+}
+
+:root {
+    --margin: 0;
+    --padding: 0;
+}
+
+* {
+    font-family: "Google Sans", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
+ion-header::after {
+    background-image: unset;
+}
+
+/* HEADER */
+.header {
+    z-index: 10;
+    background-color: #fff;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 200ms ease-in-out;
+}
+.scroll {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 4px 5px 0 rgb(0 0 0 / 14%),
+                0 1px 10px 0 rgb(0 0 0 / 12%),
+                0 2px 4px -1px rgb(0 0 0 / 20%);
+}
+
+.header-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 14px 0 28px;
+}
+.header-logo-img {
+    max-height: 40px;
+    margin-right: 8px;
+}
+.header-logo-name {
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: normal;
+    text-size-adjust: 100%;
+    color: #5f6368;
+    line-height: 28px;
+}
+
+
+.header-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    --background: unset;
+    --box-shadow: unset;
+    margin: 0 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #5f6368;
+    transition: 0.2s;
+}
+.header-option:hover {
+    color: #202124;
+}
+.header-options > .active{
+    color: #01875f;
+    border-radius: 2px;
+    border-bottom: 2px solid #01875f;
+}
+.header-option-icon {
+    display: none;
+}
+
+
+.header-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 10px 0 auto;
+    right: 0;
+}
+.header-menu-option {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    padding: 12px;
+}
+.header-menu-user {
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    padding: 6px;
+}
+.menu-user-icon {
+    height: 100%;
+}
+.header-menu-option:hover, .header-menu-user:hover {
+    border-radius: 50%;
+    background-color: #F5F5F5;
+}
+
+
+/* LOGO - NOMBRE- DESARROLLADOR */
+.app-main {
+    font-weight: 400;
+    padding: 0 72px;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+}
+.body-scroll {
+    margin-top: 112px;
+}
+.app-important {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.app-icon {
+    border-radius: 20%;
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    right: 0%;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
+                0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+.app-namedev {
+    display: flex;
+    flex-direction: column;
+}
+.app-name {
+    width: 100%;
+    font-size: 4rem;
+    color: rgb(32, 33, 36);
+    margin-bottom: 16px;
+}
+.app-dev {
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    color: #01875f;
+}
+
+
+/* CALIFICACIÓN - DESCARGAS - RESTRICCIÓN DE EDAD */
+.app-features {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 12px 0;
+    margin: 32px 0;
+}
+.app-features-divider {
+    margin: 0 12px;
+    height: 20px;
+    width: 1px;
+    background-color: #e8eade;
+}
+.app-feature-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #202124;
+    width: 92px;
+}
+.app-top-number {
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+.app-top-icon {
+    width: 10px;
+    margin-left: 2px;
+}
+.app-top-icon-mpa{
+    width: 24px;
+}
+.app-bot-text {
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #5f6368;
+}
+.app-bot-icon {
+    cursor: pointer;
+    width: 12px;
+    margin-left: 2px;
+}
+.app-bot-text-icon {
+    display: flex;
+    align-items: center;
+}
+
+.app-downloads {
+    width: 60px;
+    padding: 0 24px;
+}
+.app-mpa {
+    width: 77px;
+    padding: 0 24px;
+}
+
+
+/* INSTALAR - WISHLIST */
+.app-obtain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.install-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 44px;
+    border-radius: 8px;
+    background-color: #01875f;
+    font-size: 0.9rem;
+    color: #fff;
+    transition: 0.2s;
+}
+.install-btn:hover {
+    background-color: #095944;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
+                0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+.install-qr {
+    display: none;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #d6dee1;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
+                0 1px 3px 1px rgb(60 64 67 / 15%);
+    border-radius: 12px;
+    padding: 8px;
+}
+.show {
+    display: flex;
+}
+
+.wishlist {
+    cursor: pointer;
+    margin-left: 16px;
+    padding: 12px 12px 12px 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #01875f;
+}
+.wishlist:hover {
+    background-color: #F6FAFE;
+}
+.wish-icon {
+    margin: 0 8px;
+    width: 20px;
+}
+
+
+/* BODY */
+.body {
+    margin: 0 72px;
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.2px;
+    font-size: 0.85rem;
+    color: #5f6368;
+}
+.body-left, .body-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.body-left {
+    width: calc(100% - 436px);
+}
+.body-right {
+    width: 364px;
+}
+.body-left-section, .body-right, .body-screenshots {
+    margin-bottom: 48px;
+}
+
+.body-screenshots {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: start;
+}
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+.body-screenshot-img {
+    margin: 4px 0;
+    margin-right: 16px;
+    width: 172px;
+    height: 296px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
+                0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+
+.body-section-title {
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #202124;
+}
+.body-section-text {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+}
+
+.last-update-title {
+    margin-top: 24px;
+    font-weight: 400;
+    color: #202124;
+}
+.last-update-text {
+    margin-top: 8px;
+    margin-bottom: 28px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+.category {
+    height: 30px;
+    padding: 6px 15px;
+    border: 1px solid rgb(218,220,224);
+    border-radius: 16px;
+    font-weight: 400;
+    transition: 0.1s;
+}
+.category:hover {
+    background-color: #F7F8F8;
+    color: #202124;
+}
+
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+}
+.contact-info-section {
+    display: flex;
+    align-items: flex-start;
+    border-radius: 8px;
+    padding: 12px;
+    transition: 0.1s;
+}
+.contact-info-section:hover {
+    background-color: #F5F5F5;
+}
+.email {
+    cursor: pointer;
+}
+.info-section-icon {
+    margin-right: 16px;
+    width: 20px;
+}
+.info-section-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px 0;
+}
+.info-section-title {
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+.info-section-info {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.2px;
+    font-size: 0.85rem;
+}
+
+/* FOOTER */
+.footer {
+    margin: 0 72px;
+}
+
+.footer-start {
+    display: flex;
+    align-items: center;
+    margin-bottom: 64px;
+    font-size: 0.9rem;
+}
+.footer-start-icon {
+    width: 16px;
+    margin-right: 16px;
+}
+
+.footer-sections {
+    margin-top: 24px;
+    display: flex;
+    border-top: 1px solid #e8eade;
+    font-size: 14px;
+}
+.footer-section {
+    width: 244px;
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    color: #5f6368;
+    font-size: 0.9rem;
+}
+.footer-section-title {
+    font-weight: 400;
+}
+.footer-section-item {
+    margin-top: 16px;
+    font-weight: 300;
+}
+.footer-section-item:hover {
+    color: #01875f;
+}
+
+.footer-end {
+    font-weight: 300;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-size: 0.75rem;
+    color: #5f6368;
+}
+.footer-end-item, .footer-end-info, .footer-end-country {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    margin-right: 24px;
+}
+.footer-end-item:hover {
+    color: #01875f;
+}
+.footer-end-country {
+    margin: 0 0 0 auto;
+}
+
+@media only screen and (max-width: 1279px) {
+    .app-main {
+        padding: 0 48px;
+    }
+    .app-icon {
+        width: 180px;
+        height: 180px;
+    }
+    .app-name {
+        font-size: 2.2rem;
+    }
+
+    .install-btn {
+        width: 160px;
+        height: 36px;
+    }
+    .wishlist {
+        padding: 8px 0;
+    }
+    .wish-text {
+        display: none;
+    }
+    .wish-icon {
+        width: 24px;
+    }
+
+    .body {
+        margin: 0 48px;
+        margin-top: 64px;
+    }
+    .body-left {
+        width: calc(100% - 348px);
+    }
+    .body-right {
+        width: 276px;
+    }
+    .body-screenshot-img {
+        width: 119px;
+        height: 204px;
+    }
+    .body-section-title {
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        margin: 0 48px;
+    }
+    .footer-sections {
+        margin-top: 24px;
+    }
+    .footer-end-country {
+        margin: unset;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .body {
+        flex-direction: column;
+    }
+    .body-left {
+        width: unset;
+    }
+    .body-right {
+        width: unset;
+    }
+}
+
+@media only screen and (max-width: 839px) {
+    .header {
+        height: 56px;
+    }
+    .headerLogo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 16px;
+    }
+    .header-options {
+        z-index: 10;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width:100%;
+        background-color: #fff;
+        border-top: 1px solid #e8eade;
+        justify-content: space-evenly;
+    }
+    .header-options > .active {
+        border: unset;
+    }
+    .header-option {
+        margin: unset;
+    }
+    .header-option-icon {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .body-scroll {
+        margin-top: 104px;
+    }
+    .app-icon {
+        position: relative;
+        margin: 7px 24px 0 0;
+        width: 72px;
+        height: 72px;
+    }
+    .app-name {
+        font-size: 2.2rem;
+        margin-bottom: 4px;
+    }
+
+    .footer-sections {
+        flex-direction: column;
+    }
+    .footer-end {
+        margin-bottom: 86px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .headerLogo {
+        min-width: 170px;
+    }
+    .header-logo-name {
+        min-width: 120px;
+    }
+
+    .app-main {
+        padding: 0 24px;
+    }
+
+    .app-obtain {
+        flex-direction: column;
+    }
+    .install-btn {
+        width: 100%;
+    }
+    .wishlist {
+        padding: 12px;
+        margin: 24px 0;
+    }
+    .wish-icon {
+        width: 20px;
+        margin-left: 0;
+    }
+    .wish-text {
+        display: block;
+    }
+    
+    .body {
+        margin: 0 24px;
+        margin-top: 32px;
+    }
+
+    .footer {
+        margin: 0 24px;
+    }
+    .footer-sections {
+        margin-top: 24px;
+    }
+}
